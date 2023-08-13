@@ -1,6 +1,6 @@
 # Coordinate_Drawer
 
-The main file gets some different types of input from the file named file1.txt
+The main file gets some different types of input from the file named file1.txt.
 Line 2 gives us the matrix width and height respectively.
 Line 3 gives us how many agents will be shown.
 After the number_of_agents input, we will get agent coordinates as many as the counter.
