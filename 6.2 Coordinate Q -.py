@@ -12,7 +12,7 @@ def table_drawer(width, height, agent_list, block_list):
 
         for w in range(-width, width + 1):
 
-            for block in block_list:
+            for block in block_list: # If a block exists in this specific (w,h) coordinate print "#" and continue with the new w 
                 comma_index = block.index(",")
                 block_x =int(block[:comma_index])
                 block_y = int(block[comma_index + 1:])
@@ -20,20 +20,20 @@ def table_drawer(width, height, agent_list, block_list):
                     print("#", end="")
                     break
 
-            else:
+            else: # If there is no block in this coordinate
 
-                for agent_index in range(len(agent_list)):
+                for agent_index in range(len(agent_list)): 
                     agent = agent_list[agent_index]
                     x_index_of_agent = agent.index(",")
                     agent_x = int(agent[1:x_index_of_agent])
                     agent_y = int(agent[x_index_of_agent + 1: -1])
-                    if agent_x == w and agent_y == h and agent_list.count(agent) == 1:
+                    if agent_x == w and agent_y == h and agent_list.count(agent) == 1: # If only one agent is here 
                         print("%d" % (agent_index + 1), end="")
                         break
-                    elif agent_x == w and agent_y == h and agent_list.count(agent) >= 1:
+                    elif agent_x == w and agent_y == h and agent_list.count(agent) >= 1: # Many agents are here
                         print("0", end = "")
                         break
-                else:
+                else: # If there is not any block or agent in this coordinate
 
                     if h == 0 and w == 0:
                         print("o", end = "")
