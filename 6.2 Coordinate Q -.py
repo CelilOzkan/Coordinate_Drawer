@@ -1,15 +1,4 @@
 
-
-"""course = " Introduction to Programming "
-print(course)
-
-print(course.strip())
-
-word_list = []
-
-print(" -*- ".join(course.strip().split(" ")))"""
-
-
 def table_drawer(width, height, agent_list, block_list):
     spacing = len(str(height)) + 1
     print(" " * spacing + "+" + "-" * (((width + 1) * 2) + 1) + "+")
